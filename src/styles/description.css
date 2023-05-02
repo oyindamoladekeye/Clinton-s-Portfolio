@@ -1,0 +1,37 @@
+.description-body{
+    display: flex;
+    padding-inline: 7vw;
+}
+.description-container{
+    padding-top: 11rem;
+}
+span.jobtitle{
+    color:#133DD2
+}
+h2.introduction{
+    padding-bottom: 1.25rem;
+}
+h1.title{
+    padding-bottom: 2.25rem;
+}
+p.job-description1{
+    padding-bottom:0.625rem
+}
+p.job-description2{
+    padding-bottom: 2rem;
+}
+.description-icons{
+    display: flex;
+    gap:0.875rem
+}
+.facebook-icon{
+    padding-left: 2rem;
+}
+
+@media screen and (max-width:1024px) {
+  .description-body{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

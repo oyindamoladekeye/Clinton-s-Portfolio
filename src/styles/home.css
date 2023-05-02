@@ -1,0 +1,207 @@
+
+.why{
+    text-align: center;
+    padding-top: 6rem;
+    padding-bottom: 4rem;
+}
+.reasoncard{
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 7vw;
+}
+.active{
+    background-color: #133DD2;
+    color:white
+}
+.reason{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:343px;
+    text-align:center;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    padding-inline: 1.25rem;
+}
+.reason img{
+    width: 20%;
+}
+.project-heading{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 6rem;
+    padding-inline: 7vw;
+}
+.projects{
+    display: flex;
+    gap:76px;
+    padding-bottom:90px;
+    margin-top:50px
+}
+.projects .big-img{
+    border:10px solid  #133DD2;
+    border-radius: 7.96563px;
+    width: 35%
+}
+.project-description{
+    margin-top: 20px;
+}
+.project-detail{
+    margin-bottom: 30px;
+    line-height: 150.19%;
+}
+.project-lists{
+    padding-inline: 7vw;
+}
+.pet{
+    margin-bottom: 23px;
+}
+.tools, .tools-text{
+    display: flex;
+}
+.tools{
+    margin-top:11px;
+    align-items: center;
+    margin-bottom:40px
+}
+.tools img{
+    width:10%;
+}
+.center{
+    padding-top: 5px;
+    margin-inline: 10px;
+}
+.four{
+    width:91px
+}
+.case-study , .prototype{
+    padding-block:18px;
+    padding-inline: 38px;
+    border-radius: 10px;
+}
+button:hover{
+    cursor: pointer;
+}
+.case-study{
+    margin-right: 51px;
+    background-color: #133DD2;
+}
+.prototype{
+    background-color: #D1FBFF;
+    color:#6C6C6C
+}
+.testimonal-cards , .card-testimonal{
+    display: flex;
+}
+.card-testimonal{
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    max-width: 351px;
+    height:371px;
+    width:100%;
+    position: relative;
+    border-radius: 30px;
+}
+.card-testimonal img {
+    position: absolute;
+    bottom: 277px;
+    left: 100px;
+}
+.testimonal-cards{
+    justify-content: space-between;
+    padding-inline:7vw;
+}
+.testimonal{
+    background-color: #133DD2;
+    height:655px;
+    padding-top: 100px;
+}
+.quote{
+    color:#133DD2;
+    font-size: 200px;
+    position: absolute;
+    top:100px;
+}
+.testimonal-text{
+    padding-top: 170px;
+    text-align: center;
+    line-height: 23px;
+    width:265px
+}
+.sub{
+    text-align: right;
+    float: right;
+    left:236px;
+    top:340px;
+    position: absolute;
+}
+.testimonal h1{
+    text-align: center;
+    padding-bottom: 100px;
+    color:white
+}
+footer{
+    padding-top: 4.5vw;
+    width:100%;
+    max-width: 100vw;
+}
+.footer-main{
+    padding-inline: 7vw;
+
+    display: flex;
+    justify-content: space-between;
+}
+.footer-left{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items:flex-start;
+    height: 230px;
+    width:40%
+}
+.footer-intro{
+    color: rgba(0, 0, 0, 1);
+
+}
+.footer-right{
+    height:190px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width:50%;
+    height:330px
+}
+.let{
+    font-size:32px;
+    font-weight: 400;
+    width:60%
+}
+.got{
+    font-size: 20px;
+    font-weight: 300;
+    color: rgba(0, 0, 0, 1);
+}
+.chat{
+    padding-bottom: 25px;
+    display: flex;
+    justify-content: flex-end;
+}
+.footer-icon{
+  display: flex;
+  justify-content: space-between;
+  width:30%
+}
+.footer-copy{
+    color:rgba(65, 65, 65, 1)
+}
+.footer-copy{
+    text-align: center;
+    padding-block: 2vw;
+    color: rgba(65, 65, 65, 1);
+    border-top: 1px solid #C3C3C3;
+    font-size: 12px;
+    font-weight: 200;
+}
