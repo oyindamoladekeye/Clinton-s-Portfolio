@@ -35,12 +35,10 @@ p.job-description2{
     width: 100%;
 
 }
-.description-icons img{
-    width:20%
-}
-.facebook-icon{
+
+/* .facebook-icon{
     padding-left: 2rem;
-}
+} */
 
 @media screen and (max-width:1024px) {
   .description-body{
@@ -51,6 +49,12 @@ p.job-description2{
   .description-container{
     width: 100%;
   }
+}
+
+@media screen and (max-width:365px) {
+    .description-icons img{
+        width:10%;
+    }
 }
 /* 
 @media screen and (max-width:768px) {
