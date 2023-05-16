@@ -22,7 +22,7 @@ export default function Description(props) {
             <img src={behance} alt="" />
           </div>
       </div>
-      <div>
+      <div className='description-img'>
         <img src={props.img} alt="" />
       </div>
     </div>

@@ -26,7 +26,7 @@ export default function Home() {
      jobDescription2="Thanks!!!"
      img={clinton}
      />
-     <h1 className='why'>Why Work With Me!</h1>
+     {/* <h1 className='why'>Why Work With Me!</h1>
      <div className='reasoncard'>
        <div className='reason'>
         <img src={accurate} alt="" />
@@ -82,7 +82,7 @@ export default function Home() {
         style={{paddingTop:"96px" , top:"245px"}}
         />
       </div>
-     </div>
+     </div> */}
     </div>
   )
 }
