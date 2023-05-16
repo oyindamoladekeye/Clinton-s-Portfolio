@@ -26,7 +26,7 @@ export default function Home() {
      jobDescription2="Thanks!!!"
      img={clinton}
      />
-     {/* <h1 className='why'>Why Work With Me!</h1>
+     <h1 className='why'>Why Work With Me!</h1>
      <div className='reasoncard'>
        <div className='reason'>
         <img src={accurate} alt="" />
@@ -41,7 +41,7 @@ export default function Home() {
         <p>Over the years and experience as a ui/ux designer, i learnt on the importance of being fast and accurate</p>
        </div>
      </div>
-     <div className='project-heading'>
+     {/* <div className='project-heading'>
        <h1>Projects</h1>
        <p className='right'>View more</p>
      </div>
@@ -53,8 +53,8 @@ export default function Home() {
         paddingTop:"40px"
         }} />
        <ProjectLists img={petcare}/>
-     </div>
-     <div className="testimonal">
+     </div> */}
+     {/* <div className="testimonal">
       <div>
         <h1>Testimonials</h1>
       </div>

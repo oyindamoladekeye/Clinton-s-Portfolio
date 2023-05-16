@@ -3,8 +3,7 @@
     padding-inline: 7vw;
 }
 .description-container{
-    padding-top: 3rem;
-    padding-bottom: 2rem;
+    padding-top: 11rem;
     width:70%
 }
 .description-img{
@@ -43,7 +42,6 @@ p.job-description2{
 
 @media screen and (max-width:1024px) {
   .description-body{
-    flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
   }
@@ -57,12 +55,15 @@ p.job-description2{
         width:8%;
         max-width: 42px;
     }
-}
-/* 
-@media screen and (max-width:768px) {
-    .description-img{
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    .description-container{
+        padding-top: 3rem;
+        padding-bottom: 2rem;
     }
-} */
+}
+
+@media screen and (max-width:768px) {
+    .description-body{
+        flex-direction: column-reverse;
+
+    }
+}
