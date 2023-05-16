@@ -42,7 +42,7 @@ p.job-description2{
 
 @media screen and (max-width:1024px) {
   .description-body{
-    flex-direction: column;
+    flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
   }
