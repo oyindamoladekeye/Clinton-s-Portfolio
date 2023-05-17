@@ -64,6 +64,9 @@
 .pet{
     margin-bottom: 23px;
 }
+.tools-text{
+    align-items: center;
+}
 .tools, .tools-text{
     display: flex;
 }
