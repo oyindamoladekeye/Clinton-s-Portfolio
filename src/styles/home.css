@@ -39,7 +39,14 @@
     padding-bottom:90px;
     margin-top:50px
 }
-.projects .big-img{
+.projects2{
+
+    display: flex;
+    flex-direction: row-reverse;
+    border-top:#C3C3C3 1px solid;
+    padding-top:40px
+}
+.projects .big-img , .projects2 .big-img{
     border:10px solid  #133DD2;
     border-radius: 7.96563px;
     width: 35%
@@ -214,5 +221,11 @@ footer{
     }
     .why{
         padding-top: 2rem;
+    }
+    .projects , .projects2{
+        flex-direction: column;
+    }
+    .projects .big-img , .projects2 .big-img{
+        width: unset;
     }
 }

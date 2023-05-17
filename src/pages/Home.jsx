@@ -5,15 +5,16 @@ import accurate from "../assets/accurate.png"
 import accurate2 from "../assets/accurate2.png"
 import accurate3 from "../assets/accurate3.png"
 import "../styles/home.css"
-import ProjectLists from '../components/ProjectLists'
+// import ProjectLists from '../components/ProjectLists'
 import petcare from "../assets/petcare.png"
 import testimonalImg1 from "../assets/testimonalImg1.png"
 import testimonalImg2 from "../assets/testimonal-img2.png"
 import testimonalImg3 from "../assets/testimonal-img3.png"
 import hub from "../assets/hub.png"
 import Testimonal from '../components/Testimonal'
+import time from "../assets/time.png"
+import work from "../assets/work.png"
 export default function Home() {
-  
   return (
     <div className='home'>
      <Description
@@ -41,19 +42,59 @@ export default function Home() {
         <p>Over the years and experience as a ui/ux designer, i learnt on the importance of being fast and accurate</p>
        </div>
      </div>
-     {/* <div className='project-heading'>
+     <div className='project-heading'>
        <h1>Projects</h1>
        <p className='right'>View more</p>
      </div>
      <div className="project-lists">
-       <ProjectLists img={petcare}/>
-       <ProjectLists img={hub} style={{
-        flexDirection: 'row-reverse' ,
-        borderBlock:"#C3C3C3 1px solid",
-        paddingTop:"40px"
-        }} />
-       <ProjectLists img={petcare}/>
-     </div> */}
+     <div className='projects'>
+        <img src={petcare} alt=""  className='big-img'/>
+        <div className='project-description'>
+            <h1 className='pet'>Pet Care vertinary mobile app</h1>
+            <p className='project-detail'>Pet care app is a veterinary care app, that allows pet owners and veterinarian to connect all over the world, 
+                to make it easier for pet owner to easily locate 
+                the closest vet around they resident and also take care of their pet from the comfort of they come.</p>
+            <div className='tools'>
+                <div className='tools-text'>
+                    <img src={time} alt="" />
+                    <p className='center four'>4 weeks</p>
+                </div>
+                <div className='tools-text'>
+                    <img src={work} alt="" />
+                    <p className='center'>Figma, Geogle, Ms word, Photoshop</p>
+                </div>
+            </div>
+            <div>
+                <button className='case-study'>View Case study</button>
+                <button className='prototype'>View Prototype</button>
+            </div>
+        </div>
+     </div>
+     <div className='projects2'>
+        <img src={hub} alt=""  className='big-img'/>
+        <div className='project-description'>
+            <h1 className='pet'>Pet Care vertinary mobile app</h1>
+            <p className='project-detail'>Pet care app is a veterinary care app, that allows pet owners and veterinarian to connect all over the world, 
+                to make it easier for pet owner to easily locate 
+                the closest vet around they resident and also take care of their pet from the comfort of they come.</p>
+            <div className='tools'>
+                <div className='tools-text'>
+                    <img src={time} alt="" />
+                    <p className='center four'>4 weeks</p>
+                </div>
+                <div className='tools-text'>
+                    <img src={work} alt="" />
+                    <p className='center'>Figma, Geogle, Ms word, Photoshop</p>
+                </div>
+            </div>
+            <div>
+                <button className='case-study'>View Case study</button>
+                <button className='prototype'>View Prototype</button>
+            </div>
+        </div>
+     </div>
+       {/* <ProjectLists img={petcare}/> */}
+     </div>
      {/* <div className="testimonal">
       <div>
         <h1>Testimonials</h1>
