@@ -95,12 +95,12 @@ export default function Home() {
      </div>
        {/* <ProjectLists img={petcare}/> */}
      </div>
-     {/* <div className="testimonal">
+     <div className="testimonal">
       <div>
         <h1>Testimonials</h1>
       </div>
       <div className='testimonal-cards'>
-        <Testimonal 
+        {/* <Testimonal 
         img={testimonalImg1} 
         text="I don't recommend you highlight the log out button like that because as much possible, 
         you want to keep the user logged in and using the web app!
@@ -121,9 +121,31 @@ export default function Home() {
         Amazing work, Keep up the good work."
         writer="Attic_Project"
         style={{paddingTop:"96px" , top:"245px"}}
-        />
+        /> */}
+        <div className='card-testimonal'>
+          <img src={testimonalImg1} alt="" className='testimonal-img-1'/>
+          <p className='quote'>“</p>
+          <p className='testimonal-text'>I don't recommend you highlight the log out button like that because as much possible, 
+        you want to keep the user logged in and using the web app!
+        Highlighting it might decrease user usage rate in my opinion</p>
+          <sub className='sub'>~{""} Yh_uxmedia</sub>
+        </div>
+        <div className='card-testimonal'>
+          <img src={testimonalImg2} alt="" className='testimonal-img-2' />
+          <p className='quote'>“</p>
+          <p className='testimonal-text'>Awesome work man, you have everything right, i may have some concern about the green colours 
+        because its a bit light to be in a white background but otherwise, Its awesome design</p>
+          <sub className='sub sub2'>~{""} Noureldin_Designs</sub>
+        </div>
+        <div className='card-testimonal'>
+          <img src={testimonalImg3} alt="" className='testimonal-img-3' />
+          <p className='quote'>“</p>
+          <p className='testimonal-text'>I love the colour scheme you use for these project,
+        Amazing work, Keep up the good work.</p>
+          <sub className='sub'>~{""} Attic_Project</sub>
+        </div>
       </div>
-     </div> */}
+     </div>
     </div>
   )
 }
