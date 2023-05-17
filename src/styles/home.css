@@ -229,3 +229,8 @@ footer{
         width: unset;
     }
 }
+@media screen and (max-width:456px){
+    .case-study{
+        margin-bottom: 20px;
+    }
+}
