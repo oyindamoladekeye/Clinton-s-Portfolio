@@ -33,15 +33,15 @@ export default function Home() {
      <div className='reasoncard'>
        <div className='reason'>
         <img src={accurate} alt="" />
-        <p>Over the years and experience as a ui/ux designer, i learnt on the importance of being fast and accurate</p>
+        <p>I excel at understanding user needs and translating them into intuitive and visually appealing designs.</p>
        </div>
        <div className='reason active'>
         <img src={accurate2} alt="" />
-        <p>Over the years and experience as a ui/ux designer, i learnt on the importance of being fast and accurate</p>
+        <p>I have extensive knowledge and expertise in UI/UX design, acquired through specialized training and practical experience.</p>
        </div>
        <div className='reason'>
         <img src={accurate3} alt="" />
-        <p>Over the years and experience as a ui/ux designer, i learnt on the importance of being fast and accurate</p>
+        <p>I have a keen eye for detail and ensure pixel-perfect designs. From typography and color selection to layout and interactions.</p>
        </div>
      </div>
      <div className='project-heading'>

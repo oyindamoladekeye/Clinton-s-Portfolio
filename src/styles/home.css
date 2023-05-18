@@ -1,4 +1,8 @@
-
+h1.why{
+    color:rgba(10, 10, 10, 1);
+    font-size: 40px;
+    font-weight: 400;
+}
 .why{
     text-align: center;
     padding-top: 6rem;
@@ -26,6 +30,14 @@
 }
 .reason img{
     width: 20%;
+}
+.reasoncard p{
+    color:rgba(100, 100, 100, 1);
+    font-weight: 400;
+    font-size: 20px;
+}
+.active p{
+    color: rgba(255 ,255, 255, 1);
 }
 .project-heading{
     display: flex;
@@ -257,6 +269,9 @@ footer{
     flex-direction: column;
     align-items: center;
     }
+    h1.why{
+        font-size: 24px;
+    }
     .why{
         padding-top: 2rem;
     }
@@ -292,6 +307,9 @@ footer{
     }
     .footer-right{
         height: unset;
+    }
+    .reasoncard p{
+        font-size: 16px;
     }
 }
 @media screen and (max-width:456px){

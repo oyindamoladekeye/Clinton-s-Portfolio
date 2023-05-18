@@ -18,10 +18,14 @@
     display: flex;
     align-items: center;
 }
-a{
-    color:#646464;
+li{
     padding-inline: 40px;
-    text-decoration: none;
+    list-style: none;
+}
+a{
+  text-decoration: none;
+  color:#646464;
+
 }
 .logo{
     display:flex;
@@ -55,7 +59,7 @@ button{
       position: absolute;
       display:block;
       left: 0;
-      top: 10%;
+      top: 8%;
       background-color: white;
       width: 100%;
       height: calc(100vh - 60px);
@@ -65,7 +69,7 @@ button{
   .nav-links{
       display: none;
     }
-    li {
+    li{
       margin-right: unset;
       margin-top: 22px;
       transition: all 0.3s ease-in;

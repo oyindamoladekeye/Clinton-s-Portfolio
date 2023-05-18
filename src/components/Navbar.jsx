@@ -22,11 +22,21 @@ export const Navbar = () => {
           <img src={logo} alt="logo" />
         </div>
         <ul className={showNavbar?"nav-mobile-links":"nav-links"}>
-          <Link to ="/">Home</Link>
-          <Link to="/project">Project</Link>
-          <Link to="/about">About</Link>
-          <Link to="/contact">Contact</Link>
-          <Link to="/contact" className='nav-btn'><Button /></Link>
+          <li>
+            <Link to ="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/project">Project</Link>
+          </li>
+          <li>
+            <Link to="/about">About</Link>
+          </li>
+          <li>
+            <Link to="/contact">Contact</Link>
+          </li>
+          <li>
+            <Link to="/contact" className='nav-btn'><Button /></Link>
+          </li>
         </ul>
         <div className="toggle" onClick={handleShowNavbar}>
           {showNavbar?<img src={toggle2} alt =""/>:<img src={toggle1}  alt=""/>}
