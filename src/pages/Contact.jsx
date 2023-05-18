@@ -9,8 +9,25 @@ import twitter from "../assets/twitter.png"
 import instagram from "../assets/instagram.png"
 import behance from "../assets/behance.png"
 import "../styles/contact.css"
+import emailjs from '@emailjs/browser';
+import { useRef } from 'react'
+ 
 export default function Contact() {
-  const [inputs, setInputs] = useState({});
+  const form = useRef();
+
+  const sendEmail=(e)=>{
+    e.preventDefault();
+    setInputs("");
+
+    emailjs.sendForm('clinton', 'template_nuewm06', e.target, 'tKobfkflBBI3G4ecD')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+     
+  }
+  const [inputs, setInputs] = useState("");
 
   const handleChange = (event) => {
     const name = event.target.name;
@@ -65,7 +82,7 @@ export default function Contact() {
               <img src={behance} alt="" />
             </div>
           </div>
-          <form>
+          <form onSubmit={sendEmail} ref={form}>
             <div className='form-name'>
               <label htmlFor="">First Name
               <input type="text"
@@ -89,10 +106,13 @@ export default function Contact() {
               onChange={handleChange}
                />
             </label>
-            <label htmlFor="" className='label-message' c>Message
-              <textarea name="Message"></textarea>
+            <label htmlFor="" className='label-message'>Message
+              <textarea name="message"               
+              value={inputs.message || ""} 
+              onChange={handleChange}></textarea>
             </label>
             <button className='form-submit'>Send</button>
+            {/* <input type="submit"  value="Send"/> */}
           </form>
         </div>
       </div>
