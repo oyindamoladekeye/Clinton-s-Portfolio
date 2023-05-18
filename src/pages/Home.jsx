@@ -14,6 +14,7 @@ import hub from "../assets/hub.png"
 import Testimonal from '../components/Testimonal'
 import time from "../assets/time.png"
 import work from "../assets/work.png"
+
 export default function Home() {
   return (
     <div className='home'>
@@ -26,6 +27,7 @@ export default function Home() {
      Do while to drop a feedback or opinion about my projects/case study"
      jobDescription2="Thanks!!!"
      img={clinton}
+     includeButton={true}
      />
      <h1 className='why'>Why Work With Me!</h1>
      <div className='reasoncard'>
@@ -56,7 +58,7 @@ export default function Home() {
                 the closest vet around they resident and also take care of their pet from the comfort of they come.</p>
             <div className='tools'>
                 <div className='tools-text'>
-                    <img src={time} alt="" />
+                    <img src={time} alt="" className='time'/>
                     <p className='center four'>4 weeks</p>
                 </div>
                 <div className='tools-text'>
@@ -73,13 +75,12 @@ export default function Home() {
      <div className='projects2'>
         <img src={hub} alt=""  className='big-img'/>
         <div className='project-description'>
-            <h1 className='pet'>Pet Care vertinary mobile app</h1>
-            <p className='project-detail'>Pet care app is a veterinary care app, that allows pet owners and veterinarian to connect all over the world, 
-                to make it easier for pet owner to easily locate 
-                the closest vet around they resident and also take care of their pet from the comfort of they come.</p>
+            <h1 className='pet'>Freelance Hub mobile app</h1>
+            <p className='project-detail'>Freelance hub is a mobile application where business and transcation takes place.
+it consist of Client with a service/task and needs a freelancer to solve/accomplish the service and get paid by the client.</p>
             <div className='tools'>
                 <div className='tools-text'>
-                    <img src={time} alt="" />
+                    <img src={time} alt="" className='time'/>
                     <p className='center four'>4 weeks</p>
                 </div>
                 <div className='tools-text'>

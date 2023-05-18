@@ -5,6 +5,7 @@ import facebook from "../assets/facebookfooter.png"
 import twitter from "../assets/twitterfooter.png"
 import linkedin from "../assets/linkedin.png"
 import instagram from "../assets/instagramfooter.png"
+import "../styles/home.css"
 export default function Footer() {
   return (
     <footer>

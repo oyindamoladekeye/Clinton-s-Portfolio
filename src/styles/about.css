@@ -1,0 +1,19 @@
+
+.story{
+    padding-inline: 7vw;
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    border-bottom:#c3c3c3 1px solid;
+    padding-bottom: 120px;
+    padding-top: 40px;
+}
+.story p{
+    font-weight: 300;
+    font-size: 24px;
+    color: rgba(60, 60, 60, 1);
+}
+.story h2{
+    font-weight: 500;
+    font-size: 36px;
+}

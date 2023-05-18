@@ -16,6 +16,10 @@
 span.jobtitle{
     color:#133DD2
 }
+h2.hello{
+    font-weight: 500;
+    font-size: 36px;
+}
 h2.introduction{
     padding-bottom: 1.25rem;
 }
@@ -23,17 +27,30 @@ h1.title{
     padding-bottom: 2.25rem;
 }
 p.job-description1{
-    padding-bottom:0.625rem
+    padding-bottom:2rem
 }
 p.job-description2{
     padding-bottom: 2rem;
+}
+p.job-description1 , p.job-description2{
+    font-weight: 300;
+    font-size: 24px;
+    color: rgba(60, 60, 60, 1);
 }
 .description-icons{
     display: flex;
     gap:0.875rem;
     max-width:400px;
     width: 100%;
-
+    align-items: center;
+}
+.description-icons img{
+    max-width: 33px;
+    height: 33px;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* .facebook-icon{
@@ -50,10 +67,11 @@ p.job-description2{
   }
 }
 
-@media screen and (max-width:365px) {
+@media screen and (max-width:375px) {
     .description-icons img{
         width:8%;
         max-width: 42px;
+        display: none;
     }
     .description-container{
         padding-top: 3rem;
@@ -65,5 +83,11 @@ p.job-description2{
     .description-body{
         flex-direction: column-reverse;
 
+    }
+    .description-icons img{
+        display: none;
+    }
+    .description-container{
+        padding-top: 6rem;
     }
 }
