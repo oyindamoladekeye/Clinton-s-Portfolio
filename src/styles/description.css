@@ -90,4 +90,8 @@ p.job-description1 , p.job-description2{
     .description-container{
         padding-top: 4rem;
     }
+    p.job-description1 , p.job-description2{
+        font-size: 16px;
+
+    }
 }

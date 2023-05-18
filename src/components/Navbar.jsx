@@ -5,7 +5,7 @@ import toggle2 from "../assets/toggle2.png"
 import { useState } from 'react';
 import "../styles/navbar.css";
 import Button from './Button';
-import {Link } from "react-router-dom";
+import {NavLink } from "react-router-dom";
 
 
 
@@ -22,20 +22,20 @@ export const Navbar = () => {
           <img src={logo} alt="logo" />
         </div>
         <ul className={showNavbar?"nav-mobile-links":"nav-links"}>
-          <li>
-            <Link to ="/">Home</Link>
+          <li id="active">
+            <NavLink to ="/">Home</NavLink>
           </li>
-          <li>
-            <Link to="/project">Project</Link>
+          <li id="active">
+            <NavLink to="/project">Project</NavLink>
           </li>
-          <li>
-            <Link to="/about">About</Link>
+          <li id="active">
+            <NavLink to="/about">About</NavLink>
           </li>
-          <li>
-            <Link to="/contact">Contact</Link>
+          <li id="active">
+            <NavLink to="/contact">Contact</NavLink>
           </li>
-          <li>
-            <Link to="/contact" className='nav-btn'><Button /></Link>
+          <li id="active">
+            <NavLink to="/contact" className='nav-btn'><Button /></NavLink>
           </li>
         </ul>
         <div className="toggle" onClick={handleShowNavbar}>

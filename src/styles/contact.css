@@ -1,0 +1,179 @@
+.contact{
+    padding-inline: 7vw;
+    padding-top: 100px;
+}
+.contact-intro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-inline: 3vw;
+    gap:25px
+}
+.contact-connect , .contact-hello{
+    font-weight: 500;
+}
+.contact-hello{
+    font-size: 64px;
+}
+.contact-want{
+    font-weight: 400;
+    font-size: 32px;
+    color:rgba(70, 70, 70, 1);
+    text-align: center;
+
+}
+.form{
+    margin-top: 120px;
+    border: 1px solid #000000;
+    /* padding: 30px; */
+    width:100%;
+    display: flex;
+}
+.form-left{
+   width: 50%;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+
+}
+.form-one{
+    padding-top: 30px;
+    display: flex;
+    width:100%;
+    flex-wrap: wrap;
+}
+.form-one p{
+    font-size:14px
+}
+.form-address , .form-email , .form-phone , .form-social{
+    width:50%;
+    display: flex;
+    align-items: center;
+    gap:20px
+}
+.form-email , .form-social{
+    padding-top: 100px;
+    padding-bottom: 200px;
+}
+.form-icons{
+    display: flex;
+    align-items: center;
+    width:50%;
+    justify-content: space-between;
+}
+.form-one img{
+    max-width: 40px;
+    width:20%;
+}
+form{
+    width: 50%;
+    border-left: 1px solid black;
+    padding: 30px;
+    font-weight: 300;
+    font-size: 16px;
+    color:rgba(0, 0, 0, 1)
+}
+.form-name{
+    display: flex;
+    gap:46px
+}
+.form-name input{
+    width:17vw;
+    height:60px;
+    outline:none;
+    border: 1px solid black;
+}
+label{
+    display: flex;
+    flex-direction: column;
+}
+input{
+    width:38vw;
+    height:60px;
+    outline:none;
+    border: 1px solid black;
+    margin-top: 15px;
+    padding-left: 10px;
+}
+.label-email{
+    margin-block: 15px;
+}
+.label-message textarea{
+    width:38vw;
+    border: 1px solid black;
+    height:117px;
+    margin-top: 15px;
+    padding: 10px;
+}
+.form-submit{
+    margin-top: 60px;
+    width:100%;
+    background-color: rgba(19, 61, 210, 1);
+    padding: 20px;
+}
+
+@media screen and (max-width:768px) {
+    .contact-connect{
+        font-size: 16px;
+    }
+    .contact-hello{
+        font-size: 32px;
+    }
+    .contact-hello img{
+        width:20%
+    }
+    .contact-want{
+        font-size: 20px;
+    }
+    .form{
+        flex-direction: column-reverse;
+        border: none;
+    }
+    .form-icons{
+        display: none;
+    }
+    form{
+        border-left: none;
+        width:100%
+    }
+    .form-left{
+        width: 100%
+    }
+    .form-submit{
+        width:100%
+    }
+    input{
+        width:100%
+    }
+    .form-name{
+        gap:0;
+        flex-direction: column;
+    }
+    .form-name input{
+        width:100%
+    }
+     .label-message textarea{
+        width:100%
+    }
+    .form-one img{
+        max-width: 20px;
+    }
+    .form-one p{
+        font-size: 12px;
+    }
+    .form-email , .form-social{
+        padding-bottom: 0;
+    }
+
+}
+
+@media screen and (max-width:500px) {
+    .form-email{
+        width:100%;
+    }
+    .form-social , .form-email{
+        padding-top: 30px;
+    }
+}
