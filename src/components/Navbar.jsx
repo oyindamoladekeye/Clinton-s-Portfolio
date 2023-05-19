@@ -15,6 +15,9 @@ export const Navbar = () => {
   const handleShowNavbar=()=>{
     setShowNavbar(!showNavbar)
   }
+  const handleNavClick = () => {
+    setShowNavbar(false);
+  };
   return (
     <nav className="nav">
       <div className="navbar">
@@ -23,19 +26,30 @@ export const Navbar = () => {
         </div>
         <ul className={showNavbar?"nav-mobile-links":"nav-links"}>
           <li id="active">
-            <NavLink to ="/">Home</NavLink>
+            <NavLink to ="/"
+            onClick={handleNavClick}
+            >Home</NavLink>
           </li>
           <li id="active">
-            <NavLink to="/project">Project</NavLink>
+            <NavLink to="/project"
+            onClick={handleNavClick}
+            >Project</NavLink>
           </li>
           <li id="active">
-            <NavLink to="/about">About</NavLink>
+            <NavLink to="/about"
+             onClick={handleNavClick}
+            >About</NavLink>
           </li>
           <li id="active">
-            <NavLink to="/contact">Contact</NavLink>
+            <NavLink to="/contact"
+            onClick={handleNavClick}
+            >Contact</NavLink>
           </li>
           <li id="active">
-            <NavLink to="/contact" className='nav-btn'><Button /></NavLink>
+            <NavLink to="/contact" 
+            className='nav-btn'
+            onClick={handleNavClick}
+            ><Button /></NavLink>
           </li>
         </ul>
         <div className="toggle" onClick={handleShowNavbar}>
