@@ -5,7 +5,9 @@ import facebook from "../assets/facebookfooter.png"
 import twitter from "../assets/twitterfooter.png"
 import linkedin from "../assets/linkedin.png"
 import instagram from "../assets/instagramfooter.png"
+import { Link } from 'react-router-dom'
 import "../styles/home.css"
+import "../components/ScrollToTop"
 export default function Footer() {
   return (
     <footer>
@@ -25,12 +27,15 @@ export default function Footer() {
       <div className='footer-right'>
         <p className='let'>Lets Connect And Build Amazing Design</p>
         <p className='got'>Got amazing idea for your next project and need someone to work with, send a massage lets work together</p>
-        <div className='chat'>
-          <img src={chat} alt="" />
-        </div>
+        <Link to ="/contact">
+          <div className='chat'>
+            <img src={chat} alt="" />
+          </div>
+        </Link>
       </div>
      </div>
      <p className='footer-copy'>COPYRIGHT@CLINTONRAPHEAL3-ALL RIGHT COPYWRITE</p>
     </footer>
   )
 }
+

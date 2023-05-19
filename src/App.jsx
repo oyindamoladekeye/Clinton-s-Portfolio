@@ -6,12 +6,14 @@ import Home from './pages/Home';
 import  Project from './pages/Project';
 import Contact from './pages/Contact';
 import { Routes, Route } from "react-router-dom"
+import ScrollToTop from './components/ScrollToTop'
 
 
 function App() {
   return (
     <>
     <Navbar />
+    <ScrollToTop />
     <Routes >
       <Route path="/" element={<Home />}/>
       <Route path="/about" element={<About />}/>
