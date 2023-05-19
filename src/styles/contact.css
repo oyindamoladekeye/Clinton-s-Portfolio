@@ -113,7 +113,39 @@ input{
     background-color: rgba(19, 61, 210, 1);
     padding: 20px;
 }
+.form-icons img{
+    max-width: 32px;
+}
 
+@media screen and (max-width:1064px) {
+    form{
+        width:75%;
+        padding-right: 40px;
+    }
+    .form-name input{
+        width: 20vw;
+    }
+    input , .label-message textarea{
+        width:44vw
+    }
+    .form-one{
+        gap:40px;
+    }
+    .form-address , .form-email , .form-phone , .form-social{
+        width:100%;
+    }
+
+    .form-email , .form-social{
+        padding: unset;
+    }
+    .form-social{
+        padding-bottom: 50px;
+    }
+    .form-icons{
+        padding-top: 100px;
+        width:100%
+    }
+}
 @media screen and (max-width:768px) {
     .contact-connect{
         font-size: 16px;

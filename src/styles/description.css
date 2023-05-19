@@ -1,6 +1,7 @@
 .description-body{
     display: flex;
     padding-inline: 7vw;
+    padding-top:2vw;
 }
 .description-container{
     padding-top: 11rem;
@@ -51,6 +52,12 @@ p.job-description1 , p.job-description2{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.description-author{
+    display: flex;
+    justify-content: flex-end;
+    font-weight: 500;
+    font-size: 1.4rem;
 }
 
 /* .facebook-icon{

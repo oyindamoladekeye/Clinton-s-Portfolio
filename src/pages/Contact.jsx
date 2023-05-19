@@ -19,7 +19,7 @@ export default function Contact() {
     e.preventDefault();
     setInputs("");
 
-    emailjs.sendForm('clinton', 'template_nuewm06', e.target, 'tKobfkflBBI3G4ecD')
+    emailjs.sendForm('clinton', 'template_nuewm06', form.current, 'tKobfkflBBI3G4ecD')
       .then((result) => {
           console.log(result.text);
       }, (error) => {

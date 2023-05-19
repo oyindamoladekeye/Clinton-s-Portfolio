@@ -14,7 +14,7 @@ export default function Description({includeButton , introduction , jobtitle , h
           <h1 className='title'>{title}</h1>
           <p className='job-description1' >{jobDescription1}</p>
           <p className='job-description2'>{jobDescription2}</p>
-          <span>{author}</span>
+          <span className='description-author'>{author}</span>
           <div className='description-icons'>
           {includeButton ? <Button /> : !includeButton}
             <img src={facebook}alt="" className='facebook-icon'/>
