@@ -7,7 +7,10 @@ import "../styles/navbar.css";
 import Button from './Button';
 import {NavLink } from "react-router-dom";
 
-
+import home from "../assets/homeicon.png"
+import project from "../assets/projecticon.png"
+import about from "../assets/abouticon.png"
+import contact from "../assets/contacticon.png"
 
 export const Navbar = () => {
 
@@ -25,25 +28,32 @@ export const Navbar = () => {
           <img src={logo} alt="logo" />
         </div>
         <ul className={showNavbar?"nav-mobile-links":"nav-links"}>
-          <li id="active">
+          <li id="active" >
             <NavLink to ="/"
             onClick={handleNavClick}
-            >Home</NavLink>
+            className='align'
+            >
+            {showNavbar ? <img src ={home} /> : null }Home
+            </NavLink>
           </li>
           <li id="active">
             <NavLink to="/project"
             onClick={handleNavClick}
-            >Project</NavLink>
+            className='align'
+            >{showNavbar ? <img src={project} /> : null}Project</NavLink>
           </li>
           <li id="active">
             <NavLink to="/about"
              onClick={handleNavClick}
-            >About</NavLink>
+             className='align'
+            >{showNavbar ? <img src={about} /> : null}About</NavLink>
           </li>
           <li id="active">
             <NavLink to="/contact"
             onClick={handleNavClick}
-            >Contact</NavLink>
+            className='align'
+
+            >{showNavbar ? <img src={contact}/> : null}Contact</NavLink>
           </li>
           <li id="active">
             <NavLink to="/contact" 

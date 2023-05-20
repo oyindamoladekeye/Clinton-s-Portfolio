@@ -4,7 +4,7 @@ import email from "../assets/email.png"
 import phone from "../assets/phone.png"
 import social from "../assets/social.png"
 import hello from "../assets/hello.png"
-import facebook from "../assets/facebook.png"
+import linkedin from "../assets/linkedin.png"
 import twitter from "../assets/twitter.png"
 import instagram from "../assets/instagram.png"
 import behance from "../assets/behance.png"
@@ -14,26 +14,85 @@ import { useRef } from 'react'
  
 export default function Contact() {
   const form = useRef();
+  const [inputs, setInputs] = useState({
+    firstname: '',
+    lastname: '',
+    email: '',
+    message: ''
+  });
+  const [submitted, setSubmitted] = useState(false);
+  const [valid, setValid] = useState(false);
+  const [errors, setErrors] = useState({
+    firstname: '',
+    lastname: '',
+    email: '',
+    message: ''
+  });
 
-  const sendEmail=(e)=>{
+  const sendEmail = (e) => {
     e.preventDefault();
-    setInputs("");
 
-    emailjs.sendForm('clinton', 'template_nuewm06', form.current, 'tKobfkflBBI3G4ecD')
-      .then((result) => {
+    // Validate the form fields
+    let formValid = true;
+
+    if (!inputs.firstname) {
+      setErrors((prevErrors) => ({ ...prevErrors, firstname: 'Please enter a first name' }));
+      formValid = false;
+    } else {
+      setErrors((prevErrors) => ({ ...prevErrors, firstname: '' }));
+    }
+
+    if (!inputs.lastname) {
+      setErrors((prevErrors) => ({ ...prevErrors, lastname: 'Please enter a last name' }));
+      formValid = false;
+    } else {
+      setErrors((prevErrors) => ({ ...prevErrors, lastname: '' }));
+    }
+
+    if (!inputs.email) {
+      setErrors((prevErrors) => ({ ...prevErrors, email: 'Please enter an email address' }));
+      formValid = false;
+    } else {
+      setErrors((prevErrors) => ({ ...prevErrors, email: '' }));
+    }
+
+    if (!inputs.message) {
+      setErrors((prevErrors) => ({ ...prevErrors, message: 'Please enter a message' }));
+      formValid = false;
+    } else {
+      setErrors((prevErrors) => ({ ...prevErrors, message: '' }));
+    }
+
+    if (formValid) {
+      setValid(true);
+      emailjs
+        .sendForm('clinton', 'template_nuewm06', form.current, 'tKobfkflBBI3G4ecD')
+        .then((result) => {
           console.log(result.text);
-      }, (error) => {
+          setInputs({
+            firstname: '',
+            lastname: '',
+            email: '',
+            message: ''
+          });
+          setSubmitted(true);
+        })
+        .catch((error) => {
           console.log(error.text);
-      });
-     
-  }
-  const [inputs, setInputs] = useState("");
+        });
+    } else {
+      console.log('Please fill out all required fields before sending the email.');
+    }
+  };
 
   const handleChange = (event) => {
     const name = event.target.name;
     const value = event.target.value;
-    setInputs(values => ({...values, [name]: value}))
-  }
+    setInputs((prevInputs) => ({ ...prevInputs, [name]: value }));
+    setErrors((prevErrors) => ({ ...prevErrors, [name]: value ? prevErrors[name] : '' }));
+  };
+
+
   return (
     <div className='contact'>
       <div className='contact-intro'>
@@ -76,10 +135,10 @@ export default function Contact() {
               </div>
             </div>
             <div className='form-icons'>
-              <img src={facebook}alt="" className='facebook-icon'/>
-              <img src={twitter} alt="" />
-              <img src={instagram} alt="" />
-              <img src={behance} alt="" />
+              <a href="http://linkedin.com/in/clinton-rapheal-65b561212"><img src={linkedin}alt="" className='linkedin-icon'/></a>
+              <a href="https://twitter.com/honchocode"><img src={twitter} alt="" /></a>
+              <a href="https://instagram.com/honcho_design01?igshid=OGQ5ZDc2ODk2ZA=="><img src={instagram} alt="" /></a>
+              <a href="https://www.behance.net/clintonrapheal"><img src={behance} alt="" /></a>
             </div>
           </div>
           <form onSubmit={sendEmail} ref={form}>
@@ -90,6 +149,12 @@ export default function Contact() {
               value={inputs.firstname || ""} 
               onChange={handleChange}
                />
+               {submitted ? (errors.firstname ? <span className='name-error'>{errors.firstname}</span> : null) : null}
+               {/* The one above was replace with the one below because the one below is a outdated
+               {submitted && !inputs.firstname && <p>Please enter a first name</p>} 
+                                    OR
+               {submitted && !inputs.firstname ? <p>Please enter a first name</p> }
+               */}
               </label>
               <label htmlFor="">Last Name
               <input type="text"
@@ -97,6 +162,7 @@ export default function Contact() {
               value={inputs.lastname || ""} 
               onChange={handleChange}
                />
+              {submitted ? (errors.lastname ? <span className='name-error'>{errors.lastname}</span> : null) : null}
               </label>
             </div>
             <label htmlFor="" className='label-email'>Email
@@ -105,17 +171,91 @@ export default function Contact() {
               value={inputs.email || ""} 
               onChange={handleChange}
                />
+              {submitted ? (errors.email ? <span className='name-error'>{errors.email}</span> : null) : null}
             </label>
             <label htmlFor="" className='label-message'>Message
               <textarea name="message"               
               value={inputs.message || ""} 
               onChange={handleChange}></textarea>
             </label>
-            <button className='form-submit'>Send</button>
+            {submitted ? (errors.message ? <span className='name-error'>{errors.message}</span> : null) : null}
+            <button className='form-submit'type='submit'>Send</button>
             {/* <input type="submit"  value="Send"/> */}
+            {submitted ? (valid ? <p className='success'>Thanks for submitting!</p> : null) : null}
+            {/* {submitted && valid && <p>Thanks for submitting</p>} */}
           </form>
         </div>
       </div>
     </div>
   )
 }
+
+// export default function Contact() {
+//   const form = useRef();
+
+//   const sendEmail=(e)=>{
+//     e.preventDefault();
+
+//     if (!inputs.firstname) {
+//       setErrors((prevErrors) => ({ ...prevErrors, firstname: 'Please enter a first name' }));
+//     }
+//     else {
+//       setErrors((prevErrors) => ({ ...prevErrors, firstname: '' }));
+//     }
+
+//     if (!inputs.lastname) {
+//       setErrors((prevErrors) => ({ ...prevErrors, lastname: 'Please enter a last name' }));
+//     }
+//     else {
+//       setErrors((prevErrors) => ({ ...prevErrors, lastname: '' }));
+//     }
+
+//     if (!inputs.email) {
+//       setErrors((prevErrors) => ({ ...prevErrors, email: 'Please enter an email address' }));
+//     }
+//     else {
+//       setErrors((prevErrors) => ({ ...prevErrors, email: '' }));
+//     }
+//     if (!inputs.message) {
+//       setErrors((prevErrors) => ({ ...prevErrors, message: 'Please enter a message' }));
+//     }
+//     else {
+//       setErrors((prevErrors) => ({ ...prevErrors, message: '' }));
+//     }
+
+//     setInputs("");
+//     setSubmitted(true);
+//     if(inputs.firstName && inputs.lastName && inputs.email) {
+//       setValid(true);
+//       sendEmail();
+//       emailjs.sendForm('clinton', 'template_nuewm06', form.current, 'tKobfkflBBI3G4ecD')
+//       .then((result) => {
+//           console.log(result.text);
+//       }, (error) => {
+//           console.log(error.text);
+//       });
+//   }
+//   else{
+//     console.log("Please fill out all required fields before sending the email.")
+//   }
+
+//   }
+//   const [inputs, setInputs] = useState("");
+//   const [submitted, setSubmitted] = useState(false);
+//   const [valid, setValid] = useState(false);
+//   const [errors, setErrors] = useState({
+//     firstname: '',
+//     lastname: '',
+//     email: '',
+//     message:''
+//   });
+
+
+
+//   const handleChange = (event) => {
+//     const name = event.target.name;
+//     const value = event.target.value;
+//     setInputs(values => ({...values, [name]: value}));
+//     setErrors((prevErrors) => ({ ...prevErrors, [name]: value ? prevErrors[name] : prevErrors[name] }));
+
+//   }

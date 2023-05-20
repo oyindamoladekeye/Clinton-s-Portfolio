@@ -46,6 +46,10 @@ button{
 .toggle{
     display: none;
 }
+a.align img{
+  display: none;
+}
+
 @media (max-width: 600px){
     .toggle{
       cursor: pointer;
@@ -85,6 +89,15 @@ button{
     }
     .logo img{
       max-width:150px
+    }
+    a.align {
+      color:#000000;
+      display: flex;
+      align-items: flex-end;
+      font-weight: 700;
+    }
+    a.align img{
+      display: block;
     }
   }
   

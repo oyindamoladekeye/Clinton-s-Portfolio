@@ -2,6 +2,7 @@ import React from 'react'
 import Description from '../components/Description'
 import clinton from "../assets/clinton.png"
 import "../styles/about.css"
+import Expertise from '../components/Expertise'
 
 export default function About() {
   return (
@@ -20,6 +21,7 @@ export default function About() {
              Involved in each phase of the design process from discovery, requirements analysis, visual design strategy & ideation, feature specification, process flow, user flows, wire-flows, prototyping to user testing and scaling.</p>
           <p>🏠I am currently based in Lagos, Nigeria 🇳🇬, working with people and businesses all over the world🌏</p>
      </div>
+     <Expertise />
     </div>
   )
 }

@@ -5,15 +5,19 @@ import accurate from "../assets/accurate.png"
 import accurate2 from "../assets/accurate2.png"
 import accurate3 from "../assets/accurate3.png"
 import "../styles/home.css"
-// import ProjectLists from '../components/ProjectLists'
+import ProjectLists from '../components/ProjectLists'
 import petcare from "../assets/petcare.png"
 import testimonalImg1 from "../assets/testimonalImg1.png"
 import testimonalImg2 from "../assets/testimonal-img2.png"
 import testimonalImg3 from "../assets/testimonal-img3.png"
 import hub from "../assets/hub.png"
-import Testimonal from '../components/Testimonal'
+// import Testimonal from '../components/Testimonal'
 import time from "../assets/time.png"
 import work from "../assets/work.png"
+import Expertise from '../components/Expertise'
+import project1 from "../assets/project1.png"
+import project2 from "../assets/project2.png"
+import { Link } from 'react-router-dom'
 
 export default function Home() {
   return (
@@ -46,7 +50,7 @@ export default function Home() {
      </div>
      <div className='project-heading'>
        <h1>Projects</h1>
-       <p className='right'>View more</p>
+       <p className='right'><Link to="/project">View more</Link></p>
      </div>
      <div className="project-lists">
      <div className='projects'>
@@ -63,7 +67,7 @@ export default function Home() {
                 </div>
                 <div className='tools-text'>
                     <img src={work} alt="" />
-                    <p className='center'>Figma, Geogle, Ms word, Photoshop</p>
+                    <p className='center'>Figma, Geogle, Notepad, Photoshop</p>
                 </div>
             </div>
             <div>
@@ -77,7 +81,7 @@ export default function Home() {
         <div className='project-description'>
             <h1 className='pet'>Freelance Hub mobile app</h1>
             <p className='project-detail'>Freelance hub is a mobile application where business and transcation takes place.
-it consist of Client with a service/task and needs a freelancer to solve/accomplish the service and get paid by the client.</p>
+            it consist of Client with a service/task and needs a freelancer to solve/accomplish the service and get paid by the client.</p>
             <div className='tools'>
                 <div className='tools-text'>
                     <img src={time} alt="" className='time'/>
@@ -85,7 +89,7 @@ it consist of Client with a service/task and needs a freelancer to solve/accompl
                 </div>
                 <div className='tools-text'>
                     <img src={work} alt="" />
-                    <p className='center'>Figma, Geogle, Ms word, Photoshop</p>
+                    <p className='center'>Figma, Geogle, Notepad, Photoshop</p>
                 </div>
             </div>
             <div>
@@ -94,9 +98,21 @@ it consist of Client with a service/task and needs a freelancer to solve/accompl
             </div>
         </div>
      </div>
+     <ProjectLists 
+     img={project1}
+     title="Gym and fitness Website"
+     description="The gym and fitness website UI/UX is designed to provide users with a seamless and engaging experience while accessing fitness-related information and services. With a clean and modern interface, the website offers a user-friendly navigation system that allows visitors to effortlessly explore its various sections."
+     />
+      <ProjectLists 
+     img={project2}
+     title="Crypto Asset Dashboard"
+     description="The crypto asset dashboard UI/UX is designed to provide users with a comprehensive and user-friendly platform for managing and monitoring their cryptocurrency investments. With a sleek and intuitive interface, the dashboard offers a seamless experience that enables users to stay informed and make informed decisions in the fast-paced world of cryptocurrencies."
+     style={{borderBottom:"none"}}
+     />
        {/* <ProjectLists img={petcare}/> */}
      </div>
      <div className="testimonal">
+      <Expertise />
       <div>
         <h1>Testimonials</h1>
       </div>

@@ -49,6 +49,8 @@ h1.why{
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 1.5rem;
+    font-weight: 300;
 }
 .projects{
     display: flex;
@@ -60,13 +62,20 @@ h1.why{
 
     display: flex;
     flex-direction: row-reverse;
-    border-top:#C3C3C3 1px solid;
-    padding-top:40px
+    border-block:#C3C3C3 1px solid;
+    padding-top:40px;
+    padding-bottom: 100px;
+}
+.projects-3{
+    border-bottom: 1px #c3c3c3 solid;
+    padding-bottom: 100px;
+    padding-top: 50px;
 }
 .projects .big-img , .projects2 .big-img{
     border:10px solid  #133DD2;
     border-radius: 7.96563px;
-    width: 35%
+    width: 35%;
+    object-fit: cover;
 }
 .project-description{
     margin-top: 20px;
@@ -74,12 +83,21 @@ h1.why{
 .project-detail{
     margin-bottom: 30px;
     line-height: 150.19%;
+    font-weight: 400;
+    color:rgba(100, 100, 100, 1);
+    font-size: 1.4rem;
 }
 .project-lists{
     padding-inline: 7vw;
 }
+.project-img{
+    width:35%;
+    object-fit: cover;
+
+}
 .pet{
     margin-bottom: 23px;
+    font-weight: 600;
 }
 .tools-text{
     align-items: center;
@@ -96,7 +114,9 @@ h1.why{
     width:10%;
 }
 .tools .time{
-    width: 15%
+    width: 15%;
+    position: relative;
+    top: 2px;
 }
 .center{
     padding-top: 5px;
@@ -158,7 +178,7 @@ button:hover{
 }
 .testimonal{
     background-color: #133DD2;
-    padding-top: 100px;
+    padding-top: 40px;
     padding-bottom: 50px;
     margin-top: 30px;
 }
@@ -190,7 +210,8 @@ button:hover{
 .testimonal h1{
     text-align: center;
     padding-bottom: 100px;
-    color:white
+    color:rgba(255, 255, 255, 1);
+    font-size: 2.3rem;
 }
 footer{
     padding-top: 4.5vw;
@@ -213,14 +234,16 @@ footer{
 }
 .footer-intro{
     color: rgba(0, 0, 0, 1);
+    font-weight: 400;
 
 }
 .footer-right{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     width:50%;
-    height:330px
+    height:330px;
+    gap: 30px;
 }
 .let{
     font-size:32px;
@@ -241,6 +264,10 @@ footer{
   display: flex;
   justify-content: space-between;
   width:30%
+}
+.footer-icon .behance{
+    width:24px;
+    height:24px
 }
 .footer-copy{
     color:rgba(65, 65, 65, 1)
@@ -310,6 +337,22 @@ footer{
     }
     .reasoncard p{
         font-size: 16px;
+    }
+    .project-description{
+        font-size: 1rem;
+    }
+    .testimonal h1{
+        font-size: 1.6rem;
+    }
+    .project-img{
+        width:unset
+    }
+    .projects-3{
+        padding-bottom: 50px;
+        padding-top: 20px;
+    }
+    .right{
+        font-size: 1rem;
     }
 }
 @media screen and (max-width:456px){

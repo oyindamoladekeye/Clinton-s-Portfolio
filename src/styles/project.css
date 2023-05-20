@@ -5,7 +5,14 @@
 
 }
 .project-page-h1{
-    text-align: center;
+    text-align: left;
     font-size: 2.5rem;
-    font-weight: 400;
+    font-weight: 600;
+    padding-top: 80px;
+
+}
+@media screen and (max-width:768px) {
+    .project-page-h1{
+        padding-top: 30px;
+    }
 }
