@@ -5,24 +5,26 @@ import About from './pages/About';
 import Home from './pages/Home';
 import  Project from './pages/Project';
 import Contact from './pages/Contact';
-import { Routes, Route } from "react-router-dom"
+import { Routes, Route , useLocation } from "react-router-dom"
 import ScrollToTop from './components/ScrollToTop'
 import NotFound from './pages/NotFound';
 
 
 function App() {
+  const location = useLocation();
+  const excludedRoutes = ['/', '/about', '/project', '/contact'];
   return (
     <>
-    <Navbar />
+    {excludedRoutes.includes(location.pathname) && <Navbar />}
     <ScrollToTop />
     <Routes >
       <Route path="/" element={<Home />}/>
       <Route path="/about" element={<About />}/>
       <Route path="/project" element={<Project />} />
       <Route path ="/contact" element={<Contact />} />
-      {/* <Route path='*' element={<NotFound />}/> */}
+      <Route path='*' element={<NotFound />}/>
     </Routes>
-    <Footer />
+    {excludedRoutes.includes(location.pathname) && <Footer />}
     </>
   );
 }

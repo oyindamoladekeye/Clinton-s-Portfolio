@@ -93,7 +93,7 @@ export default function Home() {
                 </div>
             </div>
             <div>
-                <a href="https://raphealclinton.notion.site/Freelance-Hub-Mobile-App-fd32e27cad0b40438a95e0760832cf15"><button className='case-study'>View Case study</button></a>
+                <a href="https://raphealclinton.notion.site/Freelance-Hub-Mobile-App-UI-UX-67fc3ae337024a30b9c1967b615ea67b"><button className='case-study'>View Case study</button></a>
                 <button className='prototype'>View Prototype</button>
             </div>
         </div>

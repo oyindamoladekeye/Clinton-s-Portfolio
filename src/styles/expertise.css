@@ -59,6 +59,7 @@
 
      .expertise-list ul li p{
         font-size: 1rem;
+        white-space: nowrap;
     }
     .expertise-list{
         flex-wrap: wrap;

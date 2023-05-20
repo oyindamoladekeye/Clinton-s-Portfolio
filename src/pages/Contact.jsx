@@ -84,7 +84,14 @@ export default function Contact() {
       console.log('Please fill out all required fields before sending the email.');
     }
   };
-
+  const handleBlur = (event) => {
+    const name = event.target.name;
+    if (!inputs[name]) {
+      setErrors((prevErrors) => ({ ...prevErrors, [name]: `Please enter a ${name}` }));
+    } else {
+      setErrors((prevErrors) => ({ ...prevErrors, [name]: '' }));
+    }
+  };
   const handleChange = (event) => {
     const name = event.target.name;
     const value = event.target.value;
@@ -148,8 +155,9 @@ export default function Contact() {
               name="firstname"
               value={inputs.firstname || ""} 
               onChange={handleChange}
+              onBlur={handleBlur}
                />
-               {submitted ? (errors.firstname ? <span className='name-error'>{errors.firstname}</span> : null) : null}
+               {errors.firstname ? <span className='name-error'>{errors.firstname}</span>  : null}
                {/* The one above was replace with the one below because the one below is a outdated
                {submitted && !inputs.firstname && <p>Please enter a first name</p>} 
                                     OR
@@ -161,8 +169,9 @@ export default function Contact() {
               name="lastname"
               value={inputs.lastname || ""} 
               onChange={handleChange}
+              onBlur={handleBlur}
                />
-              {submitted ? (errors.lastname ? <span className='name-error'>{errors.lastname}</span> : null) : null}
+              {errors.lastname ? <span className='name-error'>{errors.lastname}</span> : null}
               </label>
             </div>
             <label htmlFor="" className='label-email'>Email
@@ -170,15 +179,19 @@ export default function Contact() {
               name="email"
               value={inputs.email || ""} 
               onChange={handleChange}
+              onBlur={handleBlur}
+
                />
-              {submitted ? (errors.email ? <span className='name-error'>{errors.email}</span> : null) : null}
+              {errors.email ? <span className='name-error'>{errors.email}</span> : null}
             </label>
             <label htmlFor="" className='label-message'>Message
               <textarea name="message"               
               value={inputs.message || ""} 
-              onChange={handleChange}></textarea>
+              onChange={handleChange}
+              onBlur={handleBlur}
+              ></textarea>
             </label>
-            {submitted ? (errors.message ? <span className='name-error'>{errors.message}</span> : null) : null}
+            {errors.message ? <span className='name-error'>{errors.message}</span> :null}
             <button className='form-submit'type='submit'>Send</button>
             {/* <input type="submit"  value="Send"/> */}
             {submitted ? (valid ? <p className='success'>Thanks for submitting!</p> : null) : null}

@@ -1,0 +1,36 @@
+.not-found{
+    padding-top: 100px;
+}
+p.page{
+    font-size: 6rem;
+}
+p.kindly{
+    font-size: 3rem;
+    padding-top: 50px;
+}
+p.kindly a{
+    color:#133DD2;
+}
+p.kindly a:hover{
+    text-decoration: underline;
+}
+p.page , p.kindly{
+    color:#133DD2;
+
+}
+.not-found , p.page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+@media screen and (max-width:768px) {
+    p.kindly{
+        font-size: 1rem;
+    }
+    p.page{
+        font-size: 3rem;
+    }
+}
