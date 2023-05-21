@@ -129,6 +129,7 @@ h1.why{
     padding-block:18px;
     padding-inline: 38px;
     border-radius: 10px;
+    font-size: 0.9rem;
 }
 button:hover{
     cursor: pointer;
@@ -329,7 +330,7 @@ footer{
     .footer-icon{
         width:50%
     }
-    .prototype , .let , .got{
+     .let , .got{
         display: none;
     }
     .footer-right{

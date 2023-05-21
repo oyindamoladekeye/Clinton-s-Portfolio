@@ -66,7 +66,7 @@ export default function Project() {
               </div>
               <div>
                   <a href="https://raphealclinton.notion.site/Freelance-Hub-Mobile-App-UI-UX-67fc3ae337024a30b9c1967b615ea67b"><button className='case-study'>View Case study</button></a>
-                  <button className='prototype'>View Prototype</button>
+                  <a href="https://www.figma.com/proto/24UuUCMu3a6yKHq0PwNHFB/second-case-study?page-id=370%3A2694&type=design&node-id=370-2695&viewport=376%2C149%2C0.83&scaling=scale-down&starting-point-node-id=370%3A2695"><button className='prototype'>View Prototype</button></a>
               </div>
             </div>
           </div>
