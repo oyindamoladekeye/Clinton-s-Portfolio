@@ -71,7 +71,7 @@ export default function Home() {
                 </div>
             </div>
             <div>
-                <a href="https://raphealclinton.notion.site/Pet-Care-Mobile-App-UI-UX-67fc3ae337024a30b9c1967b615ea67b"><button className='case-study'>View Case study</button></a>
+                <a href="https://raphealclinton.notion.site/Pet-Care-Mobile-App-UI-UX-9eb26b54a52b4d988876dda21dcbb717"><button className='case-study'>View Case study</button></a>
                 <button className='prototype'>View Prototype</button>
             </div>
         </div>
@@ -94,7 +94,7 @@ export default function Home() {
             </div>
             <div>
                 <a href="https://raphealclinton.notion.site/Freelance-Hub-Mobile-App-UI-UX-67fc3ae337024a30b9c1967b615ea67b"><button className='case-study'>View Case study</button></a>
-                <button className='prototype'>View Prototype</button>
+                <a href="https://www.figma.com/proto/H8wpyv9qOWofVrmRTfp4r9/First-study-case-(Pat-care)?page-id=193%3A8998&type=design&node-id=195-9630&viewport=68%2C243%2C0.13&scaling=scale-down&starting-point-node-id=193%3A9039"><button className='prototype'>View Prototype</button></a>
             </div>
         </div>
      </div>
@@ -102,12 +102,14 @@ export default function Home() {
      img={project1}
      title="Gym and fitness Website"
      description="The gym and fitness website UI/UX is designed to provide users with a seamless and engaging experience while accessing fitness-related information and services. With a clean and modern interface, the website offers a user-friendly navigation system that allows visitors to effortlessly explore its various sections."
+     href="https://www.figma.com/file/lJMmTl50tV7OSnP5wcMPYc/Untitled?type=design&node-id=0%3A1&t=wgXyAVvSi0z7fT4a-1"
      />
       <ProjectLists 
      img={project2}
      title="Crypto Asset Dashboard"
      description="The crypto asset dashboard UI/UX is designed to provide users with a comprehensive and user-friendly platform for managing and monitoring their cryptocurrency investments. With a sleek and intuitive interface, the dashboard offers a seamless experience that enables users to stay informed and make informed decisions in the fast-paced world of cryptocurrencies."
      style={{borderBottom:"none"}}
+     href="https://www.figma.com/file/79cJZWpuuXqCmMfO8KeHAM/Untitled?type=design&node-id=15%3A546&t=tEQSIkCZKcloYmJu-1"
      />
        {/* <ProjectLists img={petcare}/> */}
      </div>

@@ -2,7 +2,7 @@ import React from 'react'
 import time from "../assets/time.png"
 import work from "../assets/work.png"
 
-export default function ProjectLists({img, description , title , style}) {
+export default function ProjectLists({img, description , title , style , href}) {
   return (
     <div className='projects projects-3' style={style}>
         <img src={img} alt="" className='project-img'/>
@@ -20,8 +20,7 @@ export default function ProjectLists({img, description , title , style}) {
                 </div>
             </div>
             <div>
-                <button className='case-study'>View Project</button>
-                <button className='prototype'>View Prototype</button>
+                <a href={href}><button className='case-study'>View Project</button></a>
             </div>
         </div>
     </div>
